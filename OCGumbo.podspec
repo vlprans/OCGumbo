@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { "Tracy Yih" => "tracy.cpp@gmail.com" }
   s.source       = { :git => "https://github.com/vlprans/OCGumbo.git",
                      :tag => "0.1.1", :submodules => true }
-  s.source_files = 'OCGumbo/**/*.{h,m,c}'
+  s.source_files = ['OCGumbo/*.{h,m}', 'OCGumbo/gumbo/src/*.{h,c}']
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
   s.requires_arc = true
