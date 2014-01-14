@@ -8,9 +8,12 @@ Pod::Spec.new do |s|
   s.author       = { "Tracy Yih" => "tracy.cpp@gmail.com" }
   s.source       = { :git => "https://github.com/vlprans/OCGumbo.git",
                      :tag => "0.1.1", :submodules => true }
-  s.source_files = 'OCGumbo/**/*.{h,m,c}'
-  s.exclude_files = 'OCGumbo/gumbo/tests'
+  s.source_files = 'OCGumbo/*.{h,m}'
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
   s.requires_arc = true
+
+  s.subspec 'Gumbo' do |gumbo|
+    gumbo.source_files = 'OCGumbo/gumbo/src'
+  end
 end
